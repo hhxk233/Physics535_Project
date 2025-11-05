@@ -6,7 +6,6 @@ ALT_VENV_PY := $(VENV)/bin/python
 ALT_VENV_PIP := $(VENV)/bin/pip
 
 .PHONY: setup test figs gif
-
 setup:
 	$(PYTHON) -m venv $(VENV)
 	-$(VENV_PY) -m pip install --upgrade pip || $(ALT_VENV_PY) -m pip install --upgrade pip

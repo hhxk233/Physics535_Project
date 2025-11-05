@@ -20,6 +20,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -e .
 pytest -q
+python -m src.cli.isco_cli --samples 9
 python -m src.cli.make_figs --panels all
 make gif
 ```
@@ -28,6 +29,7 @@ make gif
 
 - `python -m src.cli.isco_cli` prints ISCO radii and efficiencies for a grid of spins.
 - `python -m src.cli.make_figs --panels all` recreates the standard figure suite.
+- `python -m src.viz.gifs` builds both GIF animations (also available via `make gif`).
 
 ## Physics checks
 
@@ -35,5 +37,13 @@ make gif
 - The Schwarzschild shadow radius should be close to sqrt(27) ~ 5.196 and circular within 1e-3.
 - Face-on inclination (i = 0 deg) keeps the shadow circular and left-right symmetric.
 
-Figures and GIFs are saved to `fig/`. CSV tables, if produced, belong in `data/`.
+Figures and GIFs are saved to `fig/`:
+
+- `fig/isco_radius_vs_a.{pdf,png}`
+- `fig/eta_vs_a.{pdf,png}`
+- `fig/shadow_multi_a_i60.{pdf,png}` for the spin sweep at i=60°
+- `fig/shadow_multi_i_a+0.90.{pdf,png}` for the inclination sweep at a=0.9
+- `fig/shadow_spin_sweep.gif` and `fig/shadow_incl_sweep.gif`
+
+CSV tables, if produced, belong in `data/`.
 

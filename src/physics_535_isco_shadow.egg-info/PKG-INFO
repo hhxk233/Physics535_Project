@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: physics-535-isco-shadow
+Version: 0.1.0
+Summary: Tools for ISCO and Kerr shadow analysis
+Author: Physics 535 Project
+Requires-Python: >=3.11
+Requires-Dist: numpy>=1.24
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: pytest>=7.4
+Requires-Dist: imageio>=2.31
+Requires-Dist: scipy>=1.10
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
